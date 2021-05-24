@@ -1,4 +1,4 @@
-# simpleTwo theme for picoCMS
+# simpleTwo theme for picoCMS (+ blog + mathjax)
 
 ## Description
 
