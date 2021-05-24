@@ -11,22 +11,6 @@
     {% endif %}
 	
 	<link rel="stylesheet" href="{{ theme_url }}/css/style.css" type="text/css">
-	
-	<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [ ['$','$'] ],
-        displayMath: [ ['$$','$$'] ],
-        skipTags: ["script","noscript","style","textarea"]
-      }
-    });
-    MathJax.Hub.Queue(function () {
-      $('.MathJax_Preview').parent().css('border','none').css('background','none').css('color','black');
-      $('.MathJax_Display').css('margin','-1em 0 -1em 0');
-    });
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
-  
 </head>
 
 
@@ -38,12 +22,22 @@
 	<div id="navbar">
 		<ul class="nav">
                                 <li><a href="{{ base_url }}"> &laquo; Go to top </a></li> 
-                                <li><a href="{{ previous_page.url }}"> &laquo; Go to previous </a></li>
 		</ul>
 	</div>
 	<div id="content">
 		<div class="inner">
-			{{ content }}
+		   {{ content }}
+			 {% for page in pages|sort_by("time")|reverse %}
+            {% if page.id starts with "my 205 si/" and not page.hidden %}
+                <div class="post">
+                    <h4>
+                      <span class="date">{{ page.date_formatted }}&emsp;</span>
+                      <a href="{{ page.url }}">{{ page.title }}</a>
+                    </h4>
+                    <p class="excerpt">{{ page.description }}</p>
+                </div>
+            {% endif %}
+        {% endfor %}
 		</div>
 	</div>
 </div> 
