@@ -21,9 +21,9 @@
 	<div id="navbar">
 		<ul class="nav">
       <li><a href="{{ base_url }}"> &laquo; Go to top </a></li> 
-      <li><a href="/my205si"> &laquo; Back to blog </a></li>
+      <li><a href="/blog"> &laquo; Back to blog </a></li>
 			{% for page in pages |sort_by("time")|reverse %}
-			  {% if page.id starts with "my 205 si/" and not page.hidden %}
+			  {% if page.id starts with "blog/" and not page.hidden %}
 				  <li{% if page.id == current_page.id %} id="active"{% endif %}>
 					  <a href="{{ page.url }}">{{ page.title }} {% if page.id == current_page.id %} &laquo; {% endif %}</a>
 				  </li>

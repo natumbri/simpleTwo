@@ -28,7 +28,7 @@
 		<div class="inner">
 		   {{ content }}
 			 {% for page in pages|sort_by("time")|reverse %}
-            {% if page.id starts with "my 205 si/" and not page.hidden %}
+            {% if page.id starts with "blog/" and not page.hidden %}
                 <div class="post">
                     <h4>
                       <span class="date">{{ page.date_formatted }}&emsp;</span>
