@@ -4,7 +4,7 @@
 
 **simpleTwo** is a *simple*, yet very clean, theme with two columns for [picoCMS](https://github.com/picocms/Pico) using a floating header.
 
-A live version of the theme can be seen at [sonst-was.de](http://sonst-was.de/simpletwo/)
+A live version of the theme can be seen at [205.si](http://205.si/), with [mathjax](https://205.si/engine/top_speed) and [blogging](https://205.si/blog).
 
 ## Installation
 
