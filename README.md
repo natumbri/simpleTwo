@@ -91,6 +91,27 @@ do in a regular book. The master page should have the following meta data:
    Toc: chapter
    ```
 
+### Blogging
+
+For blog style content use the following two templates:
+
+* `blog.twig` should work as a master page for your blog. The master page should have the following meta data:
+
+   ```yaml
+   Title: My gardening blog   
+   Description: My gardening blog   
+   Template: blog
+   ```
+
+* `blog-post.twig` is a template for a regular blog entry. Blog entries should be saved in the `blog` folder.  The menu will only show the links to the top of the book and to other blog entries. The typical blog-post meta data are:
+
+   ```yaml
+   Title: Planting in autumn
+   Description: Planting in autumn
+   Date: 2021-03-30
+   Template: blog-post
+   ```
+
 ### More complex?
 
 If your structure should be even more complex, then this system will not work for the deeper elements. You should probably combine it with links to those deeper sections created manually on sctructurally higher elements.
