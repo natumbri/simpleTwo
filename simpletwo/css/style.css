@@ -196,6 +196,8 @@ blockquote {
 img { width: 100%; }
 img.small { width: 75%; }
 img.xsmall { width: 50%; }
+img.xxsmall { width: 25%; }
+img.tiny { width: 10%; }
 
 table { width: 100%; }
 table.small { width: 75%; }
