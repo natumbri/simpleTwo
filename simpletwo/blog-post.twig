@@ -16,6 +16,11 @@
 <body>
 <div class="layout">
 	<div id="header">
+	  {% if meta.image %}
+	    <img src="{{ meta.image|url }}">
+    {% else %}
+      <img src="{{ theme_url }}/assets/fff.png">
+    {% endif %}	
 		<a href="{{ "index"|link }}">{{ site_title }}</a>
 	</div>
 	<div class="wrapper">

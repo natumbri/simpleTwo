@@ -33,7 +33,12 @@
 <body>
 <div class="layout">
 	<div id="header">
-		<a href="{{ "index"|link }}">{{ site_title }}</a>
+	  {% if meta.image %}
+	    <img src="{{ meta.image|url }}">
+    {% else %}
+      <img src="{{ theme_url }}/assets/fff.png">
+    {% endif %}
+		<a href="{{ "index"|link }}">{{ site_title|raw }}</a>
 	</div>
 	<div class="wrapper">
 	<div id="navbar">

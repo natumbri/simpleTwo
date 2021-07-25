@@ -145,14 +145,21 @@ blockquote {
 
 #header {
 	font-family: "OpenSansBold";
-	font-size: 7em;
-	
-	padding: 2% 2% 2% 24%;
+	font-size: 5em;
+	padding: 2% 2% 2% 16%;
 }
+
 #header a {
 	text-decoration:none;
 	color: #000;
 	font-weight: bold;
+}
+
+#header img {
+  height: auto;
+  width: 1.6em;
+  text-align: center;
+  vertical-align: middle;
 }
 
 #content {
