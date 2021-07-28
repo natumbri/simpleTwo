@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8" />
 
-    <title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title }}</title>
+    <title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title | raw}}</title>
     {% if meta.description %}
         <meta name="description" content="{{ meta.description|striptags }}">
     {% endif %}{% if meta.robots %}
@@ -21,7 +21,7 @@
     {% else %}
       <img src="{{ theme_url }}/assets/fff.png">
     {% endif %}
-		<a href="{{ "index"|link }}">{{ site_title }}</a>
+		<a href="{{ "index"|link }}">{{ site_title |raw}}</a>
 	</div>
   <div class="wrapper">
 	<div id="navbar">
