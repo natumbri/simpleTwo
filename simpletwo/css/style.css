@@ -93,6 +93,7 @@ th {
 }
 
 
+
 td, th {                                         border: 1px solid #ccc; }
 tr:not(:last-child) td, tr:not(:last-child) th { border-bottom: 0 none; }
 thead tr:last-child th {                         border-bottom: 0 none; }
@@ -111,6 +112,9 @@ table thead + tbody tr:first-child td {                        border-radius: 0 
   display: flex;
 }
 
+tbody>tr>*:nth-last-child(2)~*{ width:50%}
+tbody>tr>*:nth-last-child(3)~*{ width:33.3%}
+tbody>tr>*:nth-last-child(4)~*{ width:25%}
 sub {
     vertical-align: sub;
     font-size: smaller;
